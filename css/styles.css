@@ -1,10 +1,43 @@
-.game-board{
-    display:grid;
-    grid-template-columns: 120px 120px 120px;
-    grid-template-rows: 120px 120px 120px 20px;
-    justify-content:center;
+.grid {
+    border : 2px solid black;
+    height: 520px;
+    width: 600px;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
+    top:9rem;
+    background: rgb(87,168,255);
+    padding:.5rem;
+    box-shadow:5px 10px #888888;
 }
-.box{
-    background-color:white;
-    border:1px solid black;
+
+.grid table tr td {
+    height: 80px;
+    width: 90px;
+    border:2px solid black;
+    border: radius 50%;background-color:white;
+    cursor:pointer;
+}
+
+.player-one {
+    background-color:purple;
+    border-radius:10px;
+}
+
+.player-two {
+    background-color:black;
+    border-radius:10px;
+}
+
+@media screen and (max-width; 600px){
+    .grid{
+        position:absolute;
+        left:50%transform:translate(-50%);
+        width:90%;
+        height:520px;
+        top:9rem;
+        border:2px solid black;
+        padding:.5rem;
+
+    }
 }
