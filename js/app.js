@@ -1,8 +1,10 @@
-//constants
-const 
+let board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
-//variables
-
+//queryselectors
+document.addEventListener('DOMContentLoaded',()=>{
+const squares = document.querySelectorAll('.board div')
+const result = document.querySelector('#result')
+const displayCurrentPlayer = document.querySelector('#curre t-player')
 
 //winning array combos
 const winningCombos = [
@@ -77,18 +79,24 @@ const winningCombos = [
     [13, 20, 27, 34],
 ]
 
-//function that puts the 'pieces' on the floor+switches player
-
-
-
 //function that checks if four pieces are in a row
 function getWinner() {
     for (let i = 0; i < winningCombos.length; i++) {
       if (Math.abs(board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] + board[winningCombos[i][3]]) === 4) 
       return board[winningCombos[i][0]];
     }
+}
+//function that puts the 'pieces' on the board+switches player
+
+for (let i=0;i<squares.length;i++){
+    squares[i].onclick=()=>{
+
+    }
+}
 
 //announce winner
 
 //restart the board
-board = new array[9].fill(null);
+
+
+})
