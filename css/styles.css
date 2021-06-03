@@ -31,12 +31,12 @@ body{
     cursor:pointer;
 }
 .player-one {
-    background-color:red;
+    background-color:red !important;
     border-radius:10px;
 }
 
 .player-two {
-    background-color:black;
+    background-color:black !important;
     border-radius:10px;
 }
 

@@ -1,19 +1,43 @@
 //js board
 let board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
-
+let currentPlayer = 1
 //queryselectors
 let squares = document.querySelectorAll('.board td')
 const result = document.querySelector('#result')
 const displayCurrentPlayer = document.querySelector('#current-player')
-console.log(squares)
+//console.log(squares)
 squares.forEach(function(e,i){
     console.log(e)
     e.addEventListener('click',function(el){
         console.log(el.target)
+        let id=parseInt(el.target.id.replace('sq',''))
+        if (board[id]==null){
+            if (currentPlayer == 1){
+                board[id]=1
+                currentPlayer*=-1
+            }else{
+                board[id]=-1
+                currentPlayer*=-1
+            }
+        }
+        render()
+        console.log(board)
     })
 })
-
-
+//visualized js
+function render(){
+    board.forEach(function(e,i){
+        if(e==1){
+            let id=`sq${i}`
+            let s=document.getElementById(id)
+            s.setAttribute('class','player-one')
+        }else if(e==-1){
+            let id=`sq${i}`
+            let s=document.getElementById(id)
+            s.setAttribute('class','player-two')
+        }
+    })
+}
 
 //winning array combos
 const winningCombos = [
