@@ -1,26 +1,37 @@
-.grid {
-    border : 2px solid black;
-    height: 520px;
-    width: 600px;
+h1,h3,h4{
+    text-align: center;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:lavender;
+}
+.board {
     position:absolute;
     left:50%;
     transform:translate(-50%);
-    top:9rem;
-    background: rgb(87,168,255);
+    border: 1.5px solid;
     padding:.5rem;
-    box-shadow:5px 10px #888888;
+    top:9rem;
+    height: 520px;
+    width: 600px;
+    justify-content: center;   
+    background-color:pink;
 }
 
-.grid table tr td {
-    height: 80px;
-    width: 90px;
-    border:2px solid black;
-    border: radius 50%;background-color:white;
+td div {
+    width:80px;
+    height:80px;
+    border:1px solid black;
+    border-radius: 50%;
+    background-color:lavender;
     cursor:pointer;
 }
-
 .player-one {
-    background-color:purple;
+    background-color:red;
     border-radius:10px;
 }
 
@@ -29,15 +40,4 @@
     border-radius:10px;
 }
 
-@media screen and (max-width; 600px){
-    .grid{
-        position:absolute;
-        left:50%transform:translate(-50%);
-        width:90%;
-        height:520px;
-        top:9rem;
-        border:2px solid black;
-        padding:.5rem;
 
-    }
-}

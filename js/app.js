@@ -1,11 +1,7 @@
-document.addEventListener('DOMContentLoaded',()=>{
-    const squares=document.querySelectorAll('.grid div')
-    const result=document.querySelector('#result')
-    const displayCurrentPlayer=document.querySelector('#current-player')
-    let currentPlayer=1
+const 
 
-    //all the winning arrays
-    const winningCombos =[
+//winning array combos
+const winningCombos = [
     [0, 1, 2, 3],
     [41, 40, 39, 38],
     [7, 8, 9, 10],
@@ -75,54 +71,17 @@ document.addEventListener('DOMContentLoaded',()=>{
     [11, 18, 25, 32],
     [12, 19, 26, 33],
     [13, 20, 27, 34],
-    ]
+]
 
-    function checkboard(){
-        for(let a=0;a<winningCombos;a++){
-            const square1=squares[winningCombos[a][0]]
-            const square2=squares[winningCombos[a][1]]
-            const square2=squares[winningCombos[a][2]]
-            const square2=squares[winningCombos[a][3]]
-        }
-        //if the squares contains all of player one, they win
-        if(
-            square1.classList.contains('player-one')&&
-            square1.classList.contains('player-one')&&
-            square1.classList.contains('player-one')&&
-            square1.classList.contains('player-one')
-        )
-        {
-            result.innerHTML='Congrats Player 1, You Have Won!'
-        }
-        //if the squares contains all of player two, they win
-        if(
-            square1.classList.contains('player-two')&&
-            square1.classList.contains('player-two')&&
-            square1.classList.contains('player-two')&&
-            square1.classList.contains('player-two')
-        )
-        {
-            result.innerHTML='Congrats Player 2, You Have Won!'
-        }
+//function that puts the 'pieces' on the floor
+
+//function that checks if four pieces are in a row
+function getWinner() {
+    for (let i = 0; i < winningCombos.length; i++) {
+      if (Math.abs(board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] + board[winningCombos[i][3]]) === 4) 
+      return board[winningCombos[i][0]];
     }
 
-    for (let i=0; i < squares.length;i++){
-        squares[i].onclick=()=>{
-            if(squares[i+7].classList.contains('taken')){
-                if (currentPlayer == 1){
-                    squares[i].classList.add('taken')
-                    squares[i].classList.add('player-one')
-                    currentPlayer=2
-                    displayCurrentPlayer.innerHTML = currentPlayer
-                }
-                else if(currentPlaayer == 2){
-                    squares[i].classList.add('taken')
-                    squares[i].classList.add('player-two')
-                    currentPlayer=1
-                    displayCurrentPlayer.innerHTML = currentPlayer
-                }
-            }else alert ('Choose another square')
-            checkBoard()
-        }
-    }
-})
+
+//restart the board
+board = new array[9].fill(null);
