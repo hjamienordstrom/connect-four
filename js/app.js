@@ -1,4 +1,8 @@
+//constants
 const 
+
+//variables
+
 
 //winning array combos
 const winningCombos = [
@@ -73,7 +77,9 @@ const winningCombos = [
     [13, 20, 27, 34],
 ]
 
-//function that puts the 'pieces' on the floor
+//function that puts the 'pieces' on the floor+switches player
+
+
 
 //function that checks if four pieces are in a row
 function getWinner() {
@@ -82,6 +88,7 @@ function getWinner() {
       return board[winningCombos[i][0]];
     }
 
+//announce winner
 
 //restart the board
 board = new array[9].fill(null);
