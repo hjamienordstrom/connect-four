@@ -1,10 +1,19 @@
+//js board
 let board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 //queryselectors
-document.addEventListener('DOMContentLoaded',()=>{
-const squares = document.querySelectorAll('.board div')
+let squares = document.querySelectorAll('.board td')
 const result = document.querySelector('#result')
-const displayCurrentPlayer = document.querySelector('#curre t-player')
+const displayCurrentPlayer = document.querySelector('#current-player')
+console.log(squares)
+squares.forEach(function(e,i){
+    console.log(e)
+    e.addEventListener('click',function(el){
+        console.log(el.target)
+    })
+})
+
+
 
 //winning array combos
 const winningCombos = [
@@ -79,24 +88,21 @@ const winningCombos = [
     [13, 20, 27, 34],
 ]
 
+
 //function that checks if four pieces are in a row
 function getWinner() {
     for (let i = 0; i < winningCombos.length; i++) {
       if (Math.abs(board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] + board[winningCombos[i][3]]) === 4) 
       return board[winningCombos[i][0]];
-    }
+    }if(board.includes(null)) return null;
+        return 'tie';
 }
 //function that puts the 'pieces' on the board+switches player
 
-for (let i=0;i<squares.length;i++){
-    squares[i].onclick=()=>{
 
-    }
-}
 
 //announce winner
 
 //restart the board
 
 
-})
