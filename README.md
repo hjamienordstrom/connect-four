@@ -2,7 +2,7 @@
 
 Connect Four goes by many names such as Four up, Plot Four, Four in a Row, Four in a LIne, Drop Four, and even Gravitrips.
 
-<img src="empty board.png" width="450" height="350">
+<img src="assets/empty board.png" width="450" height="350">
 
 <img src="player one wins.png" width="450" height="350">
 
