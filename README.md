@@ -2,11 +2,11 @@
 
 Connect Four goes by many names such as Four up, Plot Four, Four in a Row, Four in a LIne, Drop Four, and even Gravitrips.
 
-<img src="Screen Shot 2021-06-03 at 11.31.43 PM" width="450" height="350">
+<img src="empty board.png" width="450" height="350">
 
-<img src="Screen Shot 2021-06-03 at 11.31.32 PM" width="450" height="350">
+<img src="player one wins.png" width="450" height="350">
 
-<img src="Screen Shot 2021-06-03 at 11.31.04 PM" width="450" height="350">
+<img src="player two wins.png" width="450" height="350">
 
 Though it's exact origin is not known, the game title "Connect Four" was coined in 1974 by Milton Bradley Company even though it has been played for many years prior.
 
