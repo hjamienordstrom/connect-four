@@ -8,6 +8,8 @@ Connect Four goes by many names such as Four up, Plot Four, Four in a Row, Four 
 
 <img src="photos/black wins.png" width="450" height="350">
 
+<img src="photos/wireframe.jpeg" width="450" height="350">
+
 Though it's exact origin is not known, the game title "Connect Four" was coined in 1974 by Milton Bradley Company even though it has been played for many years prior.
 
 Technologies used includes HTML, CSS, and Javascript. 
