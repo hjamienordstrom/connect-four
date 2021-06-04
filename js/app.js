@@ -1,4 +1,4 @@
-//js board
+//js board-42 null elements aka empty
 let board = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 let currentPlayer = 1
 //queryselectors
@@ -6,6 +6,7 @@ let squares = document.querySelectorAll('.board td')
 const result = document.querySelector('#result')
 const displayCurrentPlayer = document.querySelector('#current-player')
 //console.log(squares)
+//something happens when clicked
 squares.forEach(function(e,i){
     console.log(e)
     e.addEventListener('click',function(el){
@@ -37,6 +38,14 @@ function render(){
             s.setAttribute('class','player-two')
         }
     })
+    let winner = getWinner()
+    if (winner==-1){
+        result.textContent='Player Two Wins!'
+    }else if(winner==1){
+        result.textContent='Player One Wins!'
+    }else if(winner=='tie'){
+        result.textContent="It's a tie"
+    }
 }
 
 //winning array combos
@@ -113,7 +122,7 @@ const winningCombos = [
 ]
 
 
-//function that checks if four pieces are in a row
+//function that checks if four pieces are in a row-will return if player one or two wins(1,-1)
 function getWinner() {
     for (let i = 0; i < winningCombos.length; i++) {
       if (Math.abs(board[winningCombos[i][0]] + board[winningCombos[i][1]] + board[winningCombos[i][2]] + board[winningCombos[i][3]]) === 4) 
@@ -121,7 +130,7 @@ function getWinner() {
     }if(board.includes(null)) return null;
         return 'tie';
 }
-//function that puts the 'pieces' on the board+switches player
+
 
 
 

@@ -1,5 +1,11 @@
-h1,h3,h4{
+h1,h3{
     text-align: center;
+    color:black;
+    padding-top:15px;
+}
+
+#result{
+    color:black;
 }
 
 body{
@@ -7,7 +13,7 @@ body{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background-color:lavender;
+    background-color:rgb(200, 236, 131);
 }
 .board {
     position:absolute;
@@ -19,7 +25,7 @@ body{
     height: 520px;
     width: 600px;
     justify-content: center;   
-    background-color:pink;
+    background-color:rgba(255, 255, 49, 0.877);
 }
 
 .board td {
@@ -27,7 +33,7 @@ body{
     height:80px;
     border:1px solid black;
     border-radius: 50%;
-    background-color:lavender;
+    background-color:white;
     cursor:pointer;
 }
 .player-one {
