@@ -31,18 +31,18 @@ function render(){
         if(e==1){
             let id=`sq${i}`
             let s=document.getElementById(id)
-            s.setAttribute('class','player-one')
+            s.setAttribute('class','red')
         }else if(e==-1){
             let id=`sq${i}`
             let s=document.getElementById(id)
-            s.setAttribute('class','player-two')
+            s.setAttribute('class','black')
         }
     })
     let winner = getWinner()
     if (winner==-1){
-        result.textContent='Player Two Wins!'
+        result.textContent='Black Wins!'
     }else if(winner==1){
-        result.textContent='Player One Wins!'
+        result.textContent='Red Wins!'
     }else if(winner=='tie'){
         result.textContent="It's a tie"
     }
